@@ -1,10 +1,13 @@
 import streamlit as st
 import google.generativeai as genai
+import nltk
 from nltk.corpus import wordnet
 import random
 
 # Configure the API key
 genai.configure(api_key='AIzaSyA-14OLSbs0-jwQXc1B9ZYgd1c3bnza9UE')
+
+nltk.download('wordnet')
 
 # Fungsi untuk mendapatkan sinonim kata dari WordNet
 def get_synonyms(word):
